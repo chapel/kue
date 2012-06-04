@@ -117,6 +117,17 @@ job.on('complete', function(){
 });
 ```
 
+### Job Search
+
+Job search is enabled by default and the data is indexed when a job is either created or updated.
+
+To disable search set ```Job.search = false;``` before creating a queue.
+
+```js
+var Job = require('kue').Job;
+Job.search = false;
+```
+
 ### Queue Events
 
  Queue-level events are currently provide access to the job-level events previously mentioned, however scoped to the `Queue` instance to to apply logic at a "global" level. An example of this is removing completed jobs:
